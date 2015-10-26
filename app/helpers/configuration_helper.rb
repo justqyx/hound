@@ -1,29 +1,35 @@
 module ConfigurationHelper
   def ruby_config_url
-    "https://raw.githubusercontent.com/thoughtbot/hound/master/config/style_guides/ruby.yml"
+    config_url("thoughtbot/hound", "config/style_guides/ruby.yml")
   end
 
   def coffeescript_config_url
-    "https://raw.githubusercontent.com/thoughtbot/hound/master/config/style_guides/coffeescript.json"
+    config_url("thoughtbot/hound", "config/style_guides/coffeescript.json")
   end
 
   def javascript_config_url
-    "https://raw.githubusercontent.com/thoughtbot/hound/master/config/style_guides/javascript.json"
+    config_url("thoughtbot/hound", "config/style_guides/javascript.json")
   end
 
   def javascript_ignore_url
-    "https://raw.githubusercontent.com/thoughtbot/hound/master/config/style_guides/.jshintignore"
+    config_url("thoughtbot/hound", "config/style_guides/.jshintignore.yml")
   end
 
   def eslint_config_url
-    "https://raw.githubusercontent.com/thoughtbot/hound-eslint/master/config/default.json"
+    config_url("thoughtbot/hound-eslint", "config/default.json")
   end
 
   def scss_config_url
-    "https://raw.githubusercontent.com/thoughtbot/hound-scss/master/config/default.yml"
+    config_url("thoughtbot/hound-scss", "config/default.yml")
   end
 
   def haml_config_url
-    "https://raw.githubusercontent.com/thoughtbot/hound/master/config/style_guides/haml.yml"
+    config_url("thoughtbot/hound", "config/style_guides/haml.yml")
+  end
+
+  private
+
+  def config_url(slug, config_file)
+    "https://raw.githubusercontent.com/#{slug}/master/#{config_file}"
   end
 end
