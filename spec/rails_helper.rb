@@ -29,10 +29,10 @@ RSpec.configure do |config|
   ActiveJob::Base.queue_adapter = :resque
 end
 
-Capybara.configure do |config|
-  config.javascript_driver = :webkit
-  config.default_wait_time = 4
-end
+# Capybara.configure do |config|
+#   config.javascript_driver = :webkit
+#   config.default_wait_time = 4
+# end
 
 OmniAuth.configure do |config|
   config.test_mode = true

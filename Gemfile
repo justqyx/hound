@@ -1,4 +1,5 @@
-source "https://rubygems.org"
+# source "https://rubygems.org"
+source "https://ruby.taobao.org"
 
 ruby "2.2.3"
 
@@ -43,6 +44,7 @@ group :staging, :production do
 end
 
 group :development, :test do
+  gem "quiet_assets"
   gem "byebug"
   gem "dotenv-rails"
   gem "foreman"
@@ -53,11 +55,11 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara", "~> 2.4.0"
-  gem "capybara-webkit", "~> 1.5.1"
+  # gem "capybara", "~> 2.4.0"
+  # gem "capybara-webkit", "~> 1.5.1"
+  # gem "launchy"
   gem "database_cleaner"
   gem "factory_girl_rails"
-  gem "launchy"
   gem "shoulda-matchers"
   gem "webmock"
 end

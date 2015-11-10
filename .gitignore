@@ -5,3 +5,5 @@
 /log/*.log
 /tmp
 dump.rdb
+
+config/database.yml
